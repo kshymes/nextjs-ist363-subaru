@@ -1,6 +1,20 @@
-import styles from './button.module.scss';
+import classnames from 'classnames/bind';
 
-const Button = () => {
-    return <button className={styles.btn}>Button goes here.</button>
+import styles from '../components/button.module.scss'
+
+let cx = classnames.bind(styles);
+
+const Button = ({
+    label,
+    type
+}) => {
+    let buttonClasses = cx({
+        btn: true,
+        primary: type == 'primary',
+        secondary: type == 'secondary'
+    })
+    return <button className={buttonClasses}>
+        {label}
+    </button>
 }
 export default Button;
