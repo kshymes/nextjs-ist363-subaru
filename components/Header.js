@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 const Header = () => {
     return <header>
-        Header goes here.
         logo <br />
         <nav>
             <ul>
@@ -12,15 +11,16 @@ const Header = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/about">
-                        About
+                    <Link href="/vehicles">
+                        Vehicles
                     </Link>
-                    <li>
+                </li>    
+                <li>
                     <Link href="/contact">
                         Contact
                     </Link>
                 </li>
-                </li>
+                
             </ul>
         </nav>
         

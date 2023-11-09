@@ -4,12 +4,11 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
     return <Fragment>
-        <header>
+        <Header/>
             <main>
                 {children}
             </main>
-            <footer />
-        </header>
+            <Footer />
     </Fragment>
 }
 
