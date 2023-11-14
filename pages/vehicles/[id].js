@@ -7,8 +7,8 @@ import { getVehicleBySlug, getallVehicleSlugs } from '../../lib/api';
 
 export async function getStaticPaths(){
     const pathsArr = getallVehicleSlugs();
-
-    const paths = pathsArr.map((slug) => {
+    const paths = vehicles.map((vehicle) => {
+        const { slug } = vehicle.node;
         return{
             params: {
                 id: slug
