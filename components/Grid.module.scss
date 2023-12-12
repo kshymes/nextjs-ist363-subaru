@@ -1,3 +1,13 @@
+@use '../sass/abstracts/mixins';
+
 .grid {
     background-color: pink;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include mixins.breakpoint(tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mixins.breakpoint(laptop) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

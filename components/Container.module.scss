@@ -1,0 +1,11 @@
+@use '../sass/abstracts/mixins';
+
+.container {
+    background-color: yellow;
+    width: 100%; 
+    margin: 0 auto;
+    @include mixins.breakpoint (tablet) {
+        background-color: orange;
+        width: 700px;
+    }
+}
