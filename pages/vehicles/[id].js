@@ -36,7 +36,7 @@ const SingleVehiclePage = ({ vehicleData }) => {
     const { title, slug, featuredImage } = vehicleData;
     return <Layout>
         <h1>{title}</h1>
-        {trimLevels && trimLevels[0].images.thumbnail &&
+         {featuredImage &&
              <Image 
                  src={featuredImage.node.sourceUrl}
                  alt={featuredImage.node.altText}

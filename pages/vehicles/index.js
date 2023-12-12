@@ -19,10 +19,11 @@ export async function getStaticProps () {
 }
 
 const vehiclesPage = ({ vehicles, vehicleTypes }) => {
+    // add "all" to vehicleTypes
     return <Layout>
         <h1>Vehicles</h1>
         <Container>
-            <FilterBar />
+            <FilterBar items={vehicleTypes}/>
             <Grid>
                 {vehicles.map((vehicle, index) => {
                 const { title, slug, vehicleInfromation } = vehicle.node;

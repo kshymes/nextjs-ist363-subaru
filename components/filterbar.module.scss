@@ -1,0 +1,24 @@
+.filterBar {
+    background-color: skyblue;
+    //delete once this is checked
+    &List {
+       background-color: orange;
+       display: flex;
+       justify-content: center;
+       gap: 1rem; 
+       &Item {
+            background-color: pink;
+            &Button {
+                background-color: white;
+                border: 0;
+                padding: 1rem;
+                font-family: Arial;
+                &.active {
+                    background-color: red;
+                    }
+                }
+            }
+        }
+    }
+ 
+   
