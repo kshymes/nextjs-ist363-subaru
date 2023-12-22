@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin breakpoint($value) {
 	// need to validate $value
 
@@ -54,4 +56,55 @@
 
 	// error warn if string does not match or it is not a length
 
+}
+@mixin fontColors() {
+	$colors: black, green, white, pink, red, orange, yellow;
+
+	@each $color in $colors {
+		&.font-color-#{$color} {
+			color: $color;
+		}
+	}
+}
+
+@mixin textAligns() {
+	$alignments: left, center, right, justify;
+
+	@each $alignment in $alignments {
+		&.text-align-#{$alignment} {
+			text-align: $alignment;
+		}
+	}
+}
+@mixin margins() {
+	$sides: top, right, bottom, left;
+
+	@each $side in $sides {
+		@for $i from 1 through 12 {
+			&.margin-#{$side}-#{$i} {
+				margin-#{$side}: #{math.div($i, 2)}rem;
+			}
+		}
+	}
+}
+@mixin paddings() {
+	$sides: top, right, bottom, left;
+
+	@each $side in $sides {
+		@for $i from 1 through 12 {
+			&.padding-#{$side}-#{$i} {
+				padding-#{$side}: #{math.div($i, 2)}rem;
+			}
+		}
+	}
+}
+
+@mixin justifyContents() {
+	$values: flex-start, flex-end, center, space-between, space-around, space-evenly;
+
+	@each $value in $values {
+		&.justify-content-#{$value} {
+			justify-content: $value;
+		}
+	}
 }

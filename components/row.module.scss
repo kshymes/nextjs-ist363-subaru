@@ -1,0 +1,7 @@
+@use '../sass/abstracts/mixins';
+
+.row {
+    display: flex;
+    align-items: center;
+    @include mixins.justifyContents();
+}

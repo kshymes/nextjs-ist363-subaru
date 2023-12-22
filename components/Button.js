@@ -5,7 +5,8 @@ import styles from '../components/button.module.scss'
 let cx = classnames.bind(styles);
 
 const Button = ({
-    label,
+    children,
+    clickHandler,
     type
 }) => {
     let buttonClasses = cx({
@@ -13,8 +14,11 @@ const Button = ({
         primary: type == 'primary',
         secondary: type == 'secondary'
     })
-    return <button className={buttonClasses}>
-        {label}
+    return <button 
+        className={buttonClasses}
+        onClick={clickHandler}
+    >
+        {children}
     </button>
 }
 export default Button;

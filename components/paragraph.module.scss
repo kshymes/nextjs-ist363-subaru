@@ -1,0 +1,17 @@
+@use '../sass/abstracts/mixins';
+.paragraph {
+    font-size: 1rem;
+    font-family: Arial;
+    line-height: 1.2;
+    color: black;
+    a {
+        color: blue;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    @include mixins.breakpoint(tablet) {
+        font-size: 1.05rem;
+    }@include mixins.breakpoint(laptop) {
+        font-size: 1.1rem;
+    }
+}

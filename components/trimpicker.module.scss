@@ -1,0 +1,40 @@
+@use '../sass/abstracts/vars';
+@use '../sass/abstracts/mixins';
+
+
+.trimpicker {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: vars.$color__primary;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__text {
+        //background-color: yellow;
+        width: 100%;
+        padding: 1.5rem;
+    }
+    &__images {
+        background-color: pink;
+        width: 100%;
+        position: relative;
+        &__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &__foreground {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    @include mixins.breakpoint(laptop) {
+        flex-direction: row;
+    }
+}

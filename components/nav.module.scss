@@ -1,0 +1,51 @@
+@use '../sass/abstracts/mixins';
+@use '../sass/abstracts/vars';
+
+.nav {
+    //background-color:limegreen;
+    &__list {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        &__item {
+            a {
+                font-family: Arial;
+                color: black;
+                font-size: 1rem;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+    }
+    &__desktop {
+        //background-color: red;
+        display: none;
+        @include mixins.breakpoint(laptop) {
+            display: block;
+        }
+    }
+    &__mobile {
+        background-color: vars.$color__primary;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mixins.breakpoint(laptop) {
+            display: none;
+        }
+        .nav__list {
+            flex-direction: column;
+            align-items: flex-start;
+            &__item {
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

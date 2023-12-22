@@ -1,14 +1,28 @@
 @use '../sass/abstracts/mixins';
 
 .grid {
-    //background-color: pink;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    @include mixins.breakpoint(tablet) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    @include mixins.breakpoint(laptop) {
-        grid-template-columns: repeat(4, 1fr);
+    // //background-color: pink;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 1rem;
+    // @include mixins.breakpoint(tablet) {
+    //     grid-template-columns: repeat(3, 1fr);
+    // }
+    // @include mixins.breakpoint(laptop) {
+    //     grid-template-columns: repeat(4, 1fr);
+    // }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__item {
+        width: 50%;
+        background-color: yellow;
+        text-align: center;
+        @include mixins.breakpoint(tablet) {
+            width: calc(100% / 3);
+        }
+        @include mixins.breakpoint(laptop) {
+            width: calc(100% / 4);
+        }
     }
 }

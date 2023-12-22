@@ -1,0 +1,33 @@
+@use '../sass/abstracts/mixins';
+
+.showcase {
+    //background-color: lime;
+    position: relative;
+    &__text {
+        background-color: black;
+        padding: 2rem;
+        @include mixins.breakpoint(laptop) {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            z-index: 5;
+            background-color: transparent;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+    &__gradient {
+        display: none;
+        @include mixins.breakpoint(laptop) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+            z-index: 2;
+        }
+    }
+}
