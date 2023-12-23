@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import CallToAction from './CallToAction';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -8,6 +9,9 @@ const Layout = ({ children }) => {
             <main>
                 {children}
             </main>
+            <div id="call-to-action">
+            <CallToAction />
+        </div>
             <Footer />
     </Fragment>
 }

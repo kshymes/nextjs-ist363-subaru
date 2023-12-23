@@ -1,3 +1,4 @@
+import CallToAction from '../../components/CallToAction';
 import ColorPicker from '../../components/ColorPicker';
 import Container from '../../components/Container';
 import Head from 'next/head';
@@ -67,7 +68,9 @@ const SingleVehiclePage = ({ vehicleData, drivingLocations }) => {
                 />
             </Container>
 
+            <CallToAction />
         </div>
+   
     </Layout>
 }
 export default SingleVehiclePage;

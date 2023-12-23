@@ -16,7 +16,6 @@
     justify-content: center;
     &__item {
         width: 50%;
-        background-color: yellow;
         text-align: center;
         @include mixins.breakpoint(tablet) {
             width: calc(100% / 3);

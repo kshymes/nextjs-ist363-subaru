@@ -29,7 +29,7 @@ const Grid = ({ items }) => {
         open: {
             opacity: 1,
             transition: {
-                staggerChldren: 0.2
+                staggerChildren: 0.1
             }
         }
     }

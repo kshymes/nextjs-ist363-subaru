@@ -21,7 +21,7 @@ const Desktop = () => {
             {navItems.map((navItem, index) => {
                 const { label, slug } = navItem;
                 return <li key={index} className={styles.nav__list__item}>
-                    <Link href={slug}>
+                    <Link href={`/${slug}`}>
                         {label}
                     </Link>
                 </li>
@@ -49,7 +49,7 @@ const Mobile = ({ closeHandler }) => {
         open: {
             opacity: 1,
             transition: {
-                staggerChldren: 0.1
+                staggerChildren: 0.1
             }
         }
     }
