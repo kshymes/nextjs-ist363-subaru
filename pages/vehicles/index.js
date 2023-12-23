@@ -61,6 +61,7 @@ const vehiclesPage = ({ vehicles, vehicleTypes }) => {
                 items={filteredVehicles}
             />
         </Container>
+        
     </Layout>
 }
 export default vehiclesPage;
